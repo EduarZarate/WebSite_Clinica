@@ -4,4 +4,4 @@ spec:
   - name: web
     git:
       branch: main
-      repo_clone_url: https://github.com/EduarZarate/Clinica.git
+      repo_clone_url: https://github.com/EduarZarate/WebSite_Clinica.git
