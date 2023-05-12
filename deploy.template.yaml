@@ -1,5 +1,5 @@
 spec:
-  name: Clinica
+  name: WebSite_Clinica
   services:
   - name: web
     git:
