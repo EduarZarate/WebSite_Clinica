@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session, make_response
 from flask_mysqldb import MySQL
-import pdfkit
+
 
 app = Flask(__name__)
 
@@ -192,23 +192,7 @@ def login():
 
 
 
-@app.route('/generate_pdf/<int:id>', methods=['POST'])
-def generate_pdf(id):
-    
-    paciente = get_paciente_by_id(id)
 
-    
-    html = render_template('datos_paciente.html', paciente=paciente)
-
-    
-    pdf = pdfkit.from_string(html, False)
-
-   
-    response = make_response(pdf)
-    response.headers['Content-Type'] = 'application/pdf'
-    response.headers['Content-Disposition'] = f'inline; filename=paciente_{id}.pdf'
-
-    return response
 
 
 
