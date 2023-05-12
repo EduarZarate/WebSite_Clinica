@@ -1,0 +1,6 @@
+name: Clinica
+services:
+- name: web
+  github:
+    repo: digitalocean/Clinica
+    branch: main
